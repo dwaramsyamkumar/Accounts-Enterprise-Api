@@ -25,7 +25,8 @@ public class AccountsController {
   @GetMapping("/getAccounts")
   @ResponseStatus(HttpStatus.OK)
   public ResponseEntity<List<AccountsResponse>> getAllAccounts() throws Exception {
-     log.info("Fetching all the accounts for the user " );
+    log.info("Fetching all the accounts for the user ");
+
     List<AccountsResponse> accountsResponseList = accountsService.getAllAccounts();
     return ResponseEntity.ok().body(accountsResponseList);
   }

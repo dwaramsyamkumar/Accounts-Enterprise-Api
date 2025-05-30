@@ -17,11 +17,11 @@ public class AccountsResponse {
   @Schema(example = "Lloyds")
   private String accountName;
 
-  //  @JsonProperty("AccountType")
-  //  @Schema(example = "personal")
-  //  private AccountType accountType;
-
   @JsonProperty("AccountType")
   @Schema(example = "personal")
   private String accountType;
+
+  //  @JsonProperty("AccountType")
+  //  @Schema(example = "personal")
+  //  private AccountType accountType;
 }
