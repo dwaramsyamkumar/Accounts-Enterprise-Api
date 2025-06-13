@@ -6,7 +6,6 @@ import com.lbg.ob.eaisp.moneyhub.accounts.model.AccountsResponse;
 import com.lbg.ob.eaisp.moneyhub.accounts.service.AccountsService;
 import java.util.List;
 
-import com.ob.moneyhub.TestMaths;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -28,8 +27,6 @@ public class AccountsController {
   @ResponseStatus(HttpStatus.OK)
   public ResponseEntity<List<AccountsResponse>> getAllAccounts() throws Exception {
     log.info("Fetching all the accounts for the user ");
-    TestMaths maths = new TestMaths();
-    log.info("commons logic : {}",maths.sumOfTowNumbers(50,50));
     List<AccountsResponse> accountsResponseList = accountsService.getAllAccounts();
     return ResponseEntity.ok().body(accountsResponseList);
   }
